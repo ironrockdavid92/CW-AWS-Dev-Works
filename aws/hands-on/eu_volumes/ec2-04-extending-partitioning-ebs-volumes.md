@@ -174,4 +174,4 @@ ls -lh /mnt/2nd-vol/
 ls -lh /mnt/3rd-vol-part2/
 
 
-# NOTE: You can use "sudo mount -a" to mount volumes and partitions after editing fstab file without rebooting.
+# NOTE: You can use "sudo mount -a" to mount volumes and partitions after editing fstab file without rebooting...
