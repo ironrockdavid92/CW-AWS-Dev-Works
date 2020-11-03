@@ -10,6 +10,68 @@ Mappings:
 Conditions:
   
 Resources:
+    LogicalID:
+        Type: "AWS::EC2::Instance"
+        Properties:
+            AdditionalInfo: String
+            Affinity: String
+            AvailabilityZone: String
+            BlockDeviceMappings:
+                - BlockDeviceMapping
+            CpuOptions:
+                CpuOptions
+            CreditSpecification:
+                CreditSpecification
+            DisableApiTermination: Boolean
+            EbsOptimized: Boolean
+            ElasticGpuSpecifications:
+                - ElasticGpuSpecification
+            ElasticInferenceAccelerators:
+                - ElasticInferenceAccelerator
+            HibernationOptions:
+                HibernationOptions
+            HostId: String
+            HostResourceGroupArn: String
+            IamInstanceProfile: String
+            ImageId: String
+            InstanceInitiatedShutdownBehavior: String
+            InstanceType: String
+            Ipv6AddressCount: Integer
+            Ipv6Addresses:
+                - InstanceIpv6Address
+            KernelId: String
+            KeyName: String
+            LaunchTemplate:
+                LaunchTemplateSpecification
+            LicenseSpecifications:
+                - LicenseSpecification
+            Monitoring: Boolean
+            NetworkInterfaces:
+                - NetworkInterface
+            PlacementGroupName: String
+            PrivateIpAddress: String
+            RamdiskId: String
+            SecurityGroupIds:
+                - String
+            SecurityGroups:
+                - String
+            SourceDestCheck: Boolean
+            SsmAssociations:
+                - SsmAssociation
+            SubnetId: String
+            Tags:
+                - Tag
+            Tenancy: String
+            UserData: 
+                Fn::Base64:
+                    !Sub |
+                        #!/bin/bash
+                        yum uptade -y
+                        wget https://raw.githubusercontent.com/ironrockdavid92/CW-AWS-Dev-Works/master/devops/projects/201-dockerization-bookstore-api-on-python-flask-mysql/requirements.txt
+
+            Volumes:
+                - Volume
+    
   
 Transform:
   
